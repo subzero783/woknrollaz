@@ -122,8 +122,8 @@ function watch() {
   // browserSync.init({
   //   proxy: "http://localhost/woknrollaz/"
   // });
-  gulp.watch('assets/scss/**/*.scss', gulp.series(style, cacheBustTask));
-  gulp.watch('assets/vendor/**/*.css', gulp.series(style, cacheBustTask));
+  gulp.watch('assets/scss/**/*.scss', gulp.series(style));
+  gulp.watch('assets/vendor/**/*.css', gulp.series(style));
   gulp.watch('assets/js/**/*.js', minify_js);
   // gulp.watch('./**/*.php').on('change',browserSync.reload);
   // gulp.watch('assets/dist/css/style.min.css').on('change', gulp.series(browserSync.reload));
