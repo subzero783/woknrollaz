@@ -2110,18 +2110,23 @@ body {
         max-width: 1500px;
         > .row {
           > .col {
-            &:nth-child(1){
-              > ul.titles_and_text {
-                > li {
-                  > div {
-                    > div {
-                      > a {
-                        color: #fff;
-                      }
-                    }
-                  }
+            a {
+              color: rgba(255,255,255,.8);
+              display: block;
+              > svg {
+                margin-right: 10px;
+              }
+              &:hover, 
+              &:active,
+              &:focus {
+                text-decoration: none;
+                color: #eb0028;
+                > svg {
+                  color: #eb0028;  
                 }
               }
+            }
+            &:nth-child(1){
               > ul.site__social-media {
                 display: flex;
                 align-items: center;
@@ -2165,22 +2170,7 @@ body {
               }
             }
             &:nth-child(3){
-              a {
-                color: rgba(255,255,255,.8);
-                display: block;
-                > svg {
-                  margin-right: 10px;
-                }
-                &:hover, 
-                &:active,
-                &:focus {
-                  text-decoration: none;
-                  color: #eb0028;
-                  > svg {
-                    color: #eb0028;  
-                  }
-                }
-              }
+
             }
           }
         }

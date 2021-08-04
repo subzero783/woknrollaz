@@ -25,12 +25,6 @@
 
         $column_content .= '</ul>';
 
-        if (strpos($extra_content, '[') !== false) {
-            $column_content .= do_shortcode($extra_content);
-        }else{
-            $column_content .= $extra_content;
-        }
-        
         echo $column_content;
     }
 ?>
