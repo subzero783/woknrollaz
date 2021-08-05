@@ -1616,9 +1616,6 @@ body {
                       }
                     }
                   }
-                  > p {
-                    
-                  }
                 }
               }
             }
@@ -1762,6 +1759,12 @@ body {
           }
         }
       }
+     }
+     .banner_1_block {
+       background-position: center center;
+       background-size: cover;
+       background-repeat: no-repeat;
+       height: 800px; 
      }
      .form_with_locations_1_block {
        > div.row {
@@ -2127,6 +2130,24 @@ body {
               }
             }
             &:nth-child(1){
+              > ul.titles_and_text {
+                > li {
+                  > div {
+                    > div {
+                      > a {
+                        color: rgba(255,255,255,.8);
+                        display: block;
+                        &:hover, 
+                        &:active,
+                        &:focus {
+                          text-decoration: none !important;
+                          color: #eb0028 !important;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
               > ul.site__social-media {
                 display: flex;
                 align-items: center;
@@ -2168,9 +2189,6 @@ body {
                   }
                 }
               }
-            }
-            &:nth-child(3){
-
             }
           }
         }

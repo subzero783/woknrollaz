@@ -69,6 +69,40 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_610c2fa875cde": {
+                    "key": "layout_610c2fa875cde",
+                    "name": "banner_1",
+                    "label": "Banner 1",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_610c2fb075cdf",
+                            "label": "Background Image",
+                            "name": "background_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_60d4c11f435ac": {
                     "key": "layout_60d4c11f435ac",
                     "name": "tribe_events_shortcode",
@@ -1271,9 +1305,33 @@
                             "mime_types": ""
                         },
                         {
+                            "key": "field_60e76d23f46b5",
+                            "label": "Mobile Background Image",
+                            "name": "mobile_background_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
                             "key": "field_60d3c5a691067",
-                            "label": "Right Side Text",
-                            "name": "right_side_text",
+                            "label": "Headline and Subheadline",
+                            "name": "headline_and_subheadline",
                             "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
@@ -1288,6 +1346,49 @@
                             "toolbar": "full",
                             "media_upload": 1,
                             "delay": 0
+                        },
+                        {
+                            "key": "field_60d616781a3cf",
+                            "label": "Text Below Headline and Subheadline",
+                            "name": "text_below_headline",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_60d4f6003b22f",
+                            "label": "Image Below Text",
+                            "name": "image_below_text",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         }
                     ],
                     "min": "",
@@ -1296,13 +1397,32 @@
                 "layout_60d3d709c0da3": {
                     "key": "layout_60d3d709c0da3",
                     "name": "headline_and_video",
-                    "label": "Headline and Video",
+                    "label": "Headline, Subheadline and Video",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_60d3d71ac0da6",
                             "label": "Headline",
                             "name": "headline",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60d5031b96212",
+                            "label": "Sub-headline",
+                            "name": "sub_headline",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -1336,6 +1456,69 @@
                             "maxlength": "",
                             "rows": "",
                             "new_lines": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60e644e218246": {
+                    "key": "layout_60e644e218246",
+                    "name": "headline_and_subheadline",
+                    "label": "Headline and Subheadline",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60e644e218247",
+                            "label": "Headline",
+                            "name": "headline",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60e644e218248",
+                            "label": "Sub-headline",
+                            "name": "sub_headline",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60e646c31ef7f",
+                            "label": "Button",
+                            "name": "button",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
                         }
                     ],
                     "min": "",
@@ -2374,25 +2557,6 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
-                        },
-                        {
-                            "key": "field_60d4b99b8ab2b",
-                            "label": "Sub-Headline",
-                            "name": "sub_headline",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -2423,5 +2587,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1624555825
+    "modified": 1628188613
 }
