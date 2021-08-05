@@ -33,8 +33,9 @@ function style() {
       // './node_modules/slick-carousel/slick/slick-theme.css', 
 
       // my file
-      'assets/scss/fonts.scss',
-      'assets/scss/styles.scss',
+      './assets/scss/fonts.scss',
+      './assets/scss/banner-animation-01.scss',
+      './assets/scss/styles.scss',
     ]
   )
   .pipe(sourcemaps.init())
@@ -62,7 +63,7 @@ function minify_js(){
       // 'assets/vendor/owl.carousel/owl.carousel.min.js',
       // 'assets/vendor/isotope-layout/isotope.pkgd.min.js',
       // 'assets/vendor/venobox/venobox.min.js',
-      // 'assets/vendor/aos/aos.js',
+      './assets/vendor/aos/aos.js',
       './node_modules/lazyload/lazyload.min.js',
       './node_modules/jquery-parallax.js/parallax.min.js',
       './node_modules/@fortawesome/fontawesome-free/js/all.min.js',
@@ -74,7 +75,7 @@ function minify_js(){
       './node_modules/slick-carousel/slick/slick.js',
 
       // my file
-      'assets/js/scripts.js'
+      './assets/js/scripts.js'
     ],
     {
       allowEmpty: true

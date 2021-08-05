@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
   console.log('custom scripts');  
   
-  AOS.init();
+  AOS.init(); 
 
   // Events calendar
   var content = "<div class='wrapper-01'></div>";
