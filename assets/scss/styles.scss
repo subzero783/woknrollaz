@@ -1763,31 +1763,34 @@ body {
      .banner_1_block {
        height: 800px; 
        background-color: #000;
-       position: relative;
+       position: relative; 
         .box-from-side {
-          position: absolute;
+          position: relative;
+          width: 100%;
           height: 100%;
-          div.banner-image {
-            background-position: center center;
-            background-size: cover;
+          .banner-image {
             background-repeat: no-repeat;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 500px;
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
             height: 100%;
             z-index: 2;
+            bottom: 0;
+            position: relative;
+            display: inline-block;
           }
           img.rope {
-            position: absolute;
+            position: relative;
             z-index: 4;
           }
           img.banner-gif {
+            display: inline-block;
             width: 500px;
+            height: 500px;
             position: absolute;
             z-index: 4;
             bottom: 0;
-            left: 800px;
+            right: -500px;
           }
        }
 
