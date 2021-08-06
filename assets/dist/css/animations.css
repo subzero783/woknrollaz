@@ -27,7 +27,8 @@
     position: absolute;
     top: 50%;
     left: calc(var(--x, 50) * 1%);
-    animation: float calc(var(--d, 1) * 1s) calc(var(--delay, 0) * -1s) 2 linear both;
+    -webkit-animation: float calc(var(--d, 1) * 1s) calc(var(--delay, 0) * -1s) 2 linear both;
+            animation: float calc(var(--d, 1) * 1s) calc(var(--delay, 0) * -1s) 2 linear both;
   }
   
   .balloon:before {
@@ -39,7 +40,9 @@
     top: 8%;
     left: 16%;
     border-radius: 50%;
-    transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
+        -ms-transform: rotate(40deg);
+            transform: rotate(40deg);
     background: var(--shine);
   }
   
@@ -50,7 +53,9 @@
     background: var(--chord);
     top: 100%;
     left: 50%;
-    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
     position: absolute;
   }
   .balloon__handle:before,
@@ -58,7 +63,9 @@
     content: '';
     position: absolute;
     height: 5%;
-    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
     border-radius: 25% / 50%;
     left: 50%;
   }
@@ -76,11 +83,25 @@
   }
   
   
-  @keyframes float {
+  @-webkit-keyframes float {
     from {
-      transform: translate(-50%, -50%) translate(0, 100vh);
+      -webkit-transform: translate(-50%, -50%) translate(0, 100vh);
+              transform: translate(-50%, -50%) translate(0, 100vh);
     }
     to {
-      transform: translate(-50%, -50%) translate(0, -100vh);
+      -webkit-transform: translate(-50%, -50%) translate(0, -100vh);
+              transform: translate(-50%, -50%) translate(0, -100vh);
+    }
+  }
+  
+  
+  @keyframes float {
+    from {
+      -webkit-transform: translate(-50%, -50%) translate(0, 100vh);
+              transform: translate(-50%, -50%) translate(0, 100vh);
+    }
+    to {
+      -webkit-transform: translate(-50%, -50%) translate(0, -100vh);
+              transform: translate(-50%, -50%) translate(0, -100vh);
     }
   }
