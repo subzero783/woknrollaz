@@ -5,6 +5,7 @@
     position: absolute;
     width: 100%;
     z-index: 9;
+    overflow: hidden;
 }
 
 :root {
@@ -14,22 +15,13 @@
     --primary-color: hsl(320, 100%, 50%);
     --chord: hsl(45, 100%, 40%);
     --shine: hsla(0, 0%, 100%, 0.75);
-  }
-/*   
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: hsl(180, 100%, 95%);
-  overflow: hidden;
-} */
-  
+}
+
   .balloon {
     --primary-color: hsla(var(--h, 0), 100%, 50%, 0.8);
     --size: calc(var(--s, 10) * var(--coefficient));
-    height: calc(0.4 * var(--size));
-    width: calc(0.4 * var(--size));
+    height: calc(0.3 * var(--size));
+    width: calc(0.3 * var(--size));
     background: var(--primary-color);
     border-radius: 50% 50% 50% 50% / 45% 45% 55% 55%;
     position: absolute;
