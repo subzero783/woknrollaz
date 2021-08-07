@@ -1,13 +1,6 @@
 .banner_1_block {
     .box-from-side {
         animation: banner01 10s linear 1 forwards;
-        
-    }
-    .banner-image {
-        // animation: banner01 10s linear 1;
-    }
-    img.banner-gif {
-        // animation: banner01 10s linear 1 forwards;
     }
 }
 
@@ -18,13 +11,4 @@
     100%{ 
         left: 0;
     }
-  }
-
-  @keyframes camel01 {
-      0% {
-        left: 500px;
-      }
-      100% {
-        left: 100%;
-      }
-  }
+  } 
