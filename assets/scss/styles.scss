@@ -2145,7 +2145,6 @@ body {
           > .col {
             a {
               color: rgba(255,255,255,.8);
-              display: block;
               > svg {
                 margin-right: 10px;
               }
@@ -2218,6 +2217,11 @@ body {
                     }
                   }
                 }
+              }
+            }
+            &:nth-child(3){
+              a {
+                display: block;
               }
             }
           }
