@@ -1,11 +1,11 @@
 /* Banner 1 */
 .balloons {
-    height: 100%;
     background-color: transparent;
     position: absolute;
     width: 100%;
     z-index: 9;
     overflow: hidden;
+    height: 100%;
 }
 
 :root {
@@ -81,6 +81,19 @@
     background: var(--primary-color);
     width: 700%;
   }
+
+  .banner_1_block .box-from-side {
+    animation: banner01 10s ease-in 1 forwards;
+  }
+
+@keyframes banner01 {
+    0% {
+        left: -100%;
+    }
+    100%{ 
+        left: 0;
+    }
+  } 
   
   
   @-webkit-keyframes float {

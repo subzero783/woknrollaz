@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const browserSync = require('browser-sync').create();
+// const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
@@ -102,9 +102,9 @@ function cacheBustTask(){
   // to:      assets/dist/css/style-[hash].min.css
   return gulp.src('assets/dist/css/style.min.css')
     .pipe(rev())
-    .pipe(gulp.dest('assets/dist/css'));
-    // .pipe(rev.manifest({merge: true}))
-    // .pipe(gulp.dest('assets/dist/css'));
+    .pipe(gulp.dest('assets/dist/css'))
+    .pipe(rev.manifest({merge: true}))
+    .pipe(gulp.dest('assets/dist/css')); 
 }
 
 function rev_dist_clean(){
@@ -123,8 +123,8 @@ function watch() {
   // browserSync.init({
   //   proxy: "http://localhost/woknrollaz/"
   // });
-  gulp.watch('assets/scss/**/*.scss', gulp.series(style));
-  gulp.watch('assets/vendor/**/*.css', gulp.series(style));
+  gulp.watch('assets/scss/**/*.scss', gulp.series(style, cacheBustTask));
+  gulp.watch('assets/vendor/**/*.css', gulp.series(style, cacheBustTask));
   gulp.watch('assets/js/**/*.js', minify_js);
   // gulp.watch('./**/*.php').on('change',browserSync.reload);
   // gulp.watch('assets/dist/css/style.min.css').on('change', gulp.series(browserSync.reload));
