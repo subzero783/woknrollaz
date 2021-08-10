@@ -86,9 +86,18 @@
     animation: banner01 10s ease-in 1 forwards;
   }
 
+@-webkit-keyframes banner01 {
+  0%{
+    left: -50%;
+  }
+  100%{
+    left: 0;
+  }
+}
+
 @keyframes banner01 {
     0% {
-        left: -100%;
+        left: -50%;
     }
     100%{ 
         left: 0;

@@ -8,6 +8,7 @@
 <div id="<?php echo $field['menu_id']; ?>" class="<?php echo $field['acf_fc_layout'];?>_block" style="background-image:url(<?php echo $todays_menu['background_image']['url'];?>);">
         <div class="container">
             <div class="row">
+                <img class="image_above_menu" src="<?php echo $todays_menu['image_above_menu']['url'];?>" alt="<?php echo $todays_menu['image_above_menu']['alt'];?>" />
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <?php if(!empty($todays_menu['title']))
                         {
@@ -25,7 +26,7 @@
                 </div>
             </div>
             <div class="row">
-                <img class="image_above_menu" src="<?php echo $todays_menu['image_above_menu']['url'];?>" alt="<?php echo $todays_menu['image_above_menu']['alt'];?>" />
+                
 
                 <div class="foreground_image_and_image_below_foreground_image">
                     <img class="foreground_image lazyload" src="<?php echo $todays_menu['foreground_image']['url'];?>" alt="<?php echo $todays_menu['foreground_image']['alt'];?>" />

@@ -103,8 +103,8 @@ function cacheBustTask(){
   return gulp.src('assets/dist/css/style.min.css')
     .pipe(rev())
     .pipe(gulp.dest('assets/dist/css'))
-    // .pipe(rev.manifest())
-    // .pipe(gulp.dest('assets/dist/css')); 
+    .pipe(rev.manifest())
+    .pipe(gulp.dest('assets/dist/css')); 
 }
 
 function rev_dist_clean(){
