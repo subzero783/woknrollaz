@@ -103,7 +103,7 @@ function cacheBustTask(){
   return gulp.src('assets/dist/css/style.min.css')
     .pipe(rev())
     .pipe(gulp.dest('assets/dist/css'))
-    .pipe(rev.manifest({merge: true}))
+    .pipe(rev.manifest())
     .pipe(gulp.dest('assets/dist/css')); 
 }
 

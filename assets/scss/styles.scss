@@ -1761,7 +1761,7 @@ body {
           }
         }
       }
-    }
+    } 
     .banner_1_block {
       background: rgb(255, 255, 255); 
       background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(209, 209, 209, 1) 32%, rgba(255, 255, 255, 1) 100%);
@@ -1780,26 +1780,32 @@ body {
           bottom: 0;
           position: relative;
           display: inline-block; 
+
+          @media only screen and (max-width: 768px){
+            display: none;
+          }
+          &.mobile-banner-image {
+            display: none;
+            @media only screen and (max-width: 768px){
+              display: inline-block;
+            }
+          }
+        }
+        img.banner-gif { 
+          display: inline-block;
+          max-width: 300px;
+          width: 100%;
+          z-index: 4; 
+          bottom: 0;
+          right: -300px;
+          height: auto !important;
+          position: absolute;
+          @media only screen and (max-width: 768px){
+            max-width: 200px;
+            right: -200px !important;
+          }
         }
       } 
-      img.rope {
-        position: relative;
-        z-index: 4;
-      } 
-      img.banner-gif { 
-        display: inline-block;
-        max-width: 500px;
-        width: 100%;
-        position: absolute;
-        z-index: 4; 
-        bottom: 0;
-        right: -500px;
-        height: auto !important;
-        @media only screen and (max-width: 768px){
-          max-width: 200px;
-          right: -200px !important;
-        }
-      }
     }
     a.button {
       position: absolute;

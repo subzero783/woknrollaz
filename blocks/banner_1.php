@@ -30,6 +30,8 @@
     </div>
     <div class="box-from-side">
         <img class="banner-image" src="<?php echo !empty($field['background_image']['url'])? $field['background_image']['url'] : ''; ?>" alt="<?php echo !empty($field['background_image']['alt'])? $field['background_image']['alt'] : ''; ?>" />
+        <img class="banner-image mobile-banner-image" src="<?php echo !empty($field['mobile_background_image']['url'])? $field['mobile_background_image']['url'] : ''; ?>" alt="<?php echo !empty($field['mobile_background_image']['alt'])? $field['mobile_background_image']['alt'] : ''; ?>" />
+        
         <?php echo !empty($field['animal_image']['url'])? '<img class="banner-gif" src="'. $field['animal_image']['url'] .'" alt="'.$field['animal_image']['alt'].'" />' : '' ?>
         <?php if(!empty($field['button']['url'])){ ?>
             <a href="<?php echo $field['button']['url']; ?>" target="<?php echo $field['button']['target']; ?>" class="button button_1"><span></span><span><?php echo $field['button']['title']; ?></span></a>
