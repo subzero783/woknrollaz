@@ -3,7 +3,7 @@
     background-color: transparent;
     position: absolute;
     width: 100%;
-    z-index: 9;
+    z-index: 11;
     overflow: hidden;
     height: 100%;
 }
