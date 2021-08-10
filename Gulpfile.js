@@ -103,8 +103,8 @@ function cacheBustTask(){
   return gulp.src('assets/dist/css/style.min.css')
     .pipe(rev())
     .pipe(gulp.dest('assets/dist/css'))
-    .pipe(rev.manifest())
-    .pipe(gulp.dest('assets/dist/css')); 
+    // .pipe(rev.manifest())
+    // .pipe(gulp.dest('assets/dist/css')); 
 }
 
 function rev_dist_clean(){
@@ -113,10 +113,10 @@ function rev_dist_clean(){
       'assets/dist/css/**/*'
     ],
     {
-      read: false
+      read: true
     }
   )
-  .pipe(revDistClean('assets/dist/css/rev-manifest.json'));
+  .pipe(revDistClean('assets/dist/css/rev-manifest.json'), {keepManifestFile: true});
 }
 
 function watch() {
@@ -128,7 +128,7 @@ function watch() {
   gulp.watch('assets/js/**/*.js', minify_js);
   // gulp.watch('./**/*.php').on('change',browserSync.reload);
   // gulp.watch('assets/dist/css/style.min.css').on('change', gulp.series(browserSync.reload));
-  // gulp.watch('assets/dist/css/rev-manifest.json').on('change', rev_dist_clean);
+  gulp.watch('assets/dist/css/rev-manifest.json').on('change', rev_dist_clean);
 }
 
 
