@@ -1762,7 +1762,8 @@ body {
      }
      .banner_1_block {
        height: 800px; 
-       background-color: #000;
+       background: rgb(255,255,255);
+      background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(209,209,209,1) 32%, rgba(255,255,255,1) 100%);
        position: relative; 
        overflow: hidden; 
         .box-from-side {
@@ -1793,7 +1794,13 @@ body {
             bottom: 0;
             right: -500px;
           }
-       }
+        }
+        a.button {
+          position: absolute;
+          transform: translate(-50%, 0);
+          left: 50%;
+          bottom: 100px;
+        }
 
      }
      .form_with_locations_1_block {
