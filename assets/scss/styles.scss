@@ -1799,7 +1799,8 @@ body {
           position: absolute;
           transform: translate(-50%, 0);
           left: 50%;
-          bottom: 100px;
+          bottom: 50px;
+          z-index: 10;
         }
 
      }

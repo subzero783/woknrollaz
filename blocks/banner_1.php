@@ -31,8 +31,8 @@
     <div class="box-from-side">
         <div class="banner-image" style="<?php echo !empty($field['background_image']['url'])? 'background-image:url('.$field['background_image']['url'] : ''; ?>);" alt="Banner image"></div>
         <?php echo !empty($field['animal_image']['url'])? '<img class="banner-gif" src="'. $field['animal_image']['url'] .'" alt="'.$field['animal_image']['alt'].'" />' : '' ?>
+        <?php if(!empty($field['button']['url'])){ ?>
+            <a href="<?php echo $field['button']['url']; ?>" target="<?php echo $field['button']['target']; ?>" class="button button_1"><span></span><span><?php echo $field['button']['title']; ?></span></a>
+        <?php } ?>
     </div>
-    <?php if(!empty($field['button']['url'])){ ?>
-        <a href="<?php echo $field['button']['url']; ?>" target="<?php echo $field['button']['target']; ?>" class="button button_1"><span></span><span><?php echo $field['button']['title']; ?></span></a>
-    <?php } ?>
 </div>
