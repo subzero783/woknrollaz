@@ -2101,6 +2101,7 @@ body {
   &:active,
   &:focus {
     border-color: #1d1d1d !important;
+    color: #fff;
     > span:nth-child(1) {
       height: 100%;
     }
