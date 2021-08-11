@@ -3,7 +3,7 @@
     background-color: transparent;
     position: absolute;
     width: 100%;
-    z-index: 11;
+    z-index: 9;
     overflow: hidden;
     height: 100%;
 }
@@ -83,7 +83,7 @@
   }
 
   .banner_1_block .box-from-side {
-    animation: banner01 10s ease-in 1 forwards;
+    animation: banner01 7s linear 1 forwards;
   }
 
 @-webkit-keyframes banner01 {
