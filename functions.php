@@ -191,7 +191,7 @@ function blankslate_load_scripts()
     
     wp_enqueue_style('custom-styles', get_stylesheet_directory_uri() . gustavo_get_cachebusted_css());
 
-    wp_enqueue_style('animations-css', get_stylesheet_directory_uri() . '/assets/css/animations.css');
+    wp_enqueue_style('animations-css', get_stylesheet_directory_uri() . '/assets/css/animations-2.css');
     
     wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri() . '/assets/dist/js/scripts.min.js', array('jquery'), true);
 }

@@ -34,18 +34,17 @@ function style() {
 
       // my file
       './assets/scss/fonts.scss',
-      './assets/scss/banner-animation-01.scss',
       './assets/scss/styles.scss',
     ]
   )
-  .pipe(sourcemaps.init())
+  // .pipe(sourcemaps.init())
   .pipe(concat('style.css'))
   .pipe(sass().on('error',sass.logError))
   .pipe(postcss([ autoprefixer(), cssnano()]))
   .pipe(rename({
     suffix: '.min'
   }))
-  .pipe(sourcemaps.write('.'))
+  // .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest('assets/dist/css'));
   // .pipe(browserSync.stream());
 }
@@ -113,7 +112,7 @@ function rev_dist_clean(){
       'assets/dist/css/**/*'
     ],
     {
-      read: true
+      read: false
     }
   )
   .pipe(revDistClean('assets/dist/css/rev-manifest.json'), {keepManifestFile: true});
