@@ -1318,6 +1318,25 @@ body {
         }
       }
     }
+    .two_columns_4_block {
+      overflow: hidden;
+      position: relative;
+      background-color: #f8f8f8;
+      > .row {
+        padding: 0;
+        align-items: center;
+        > .col {
+          overflow: hidden;
+          &:nth-child(1){
+            padding: 85px 5% 85px 5%;
+            > a {
+              float: left;
+            }
+          }
+        }
+        &.image
+      }
+    }
     .testimonials_slider_2_block {
       .row {
         align-items: center;
