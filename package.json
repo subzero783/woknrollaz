@@ -33,6 +33,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "gulp-cli": "^2.3.0",
     "jquery-parallax.js": "^1.5.0",
     "lazyload": "^2.0.0-rc.2"
   }

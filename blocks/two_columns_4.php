@@ -14,7 +14,7 @@
                 !empty($field['text'])? $field['text'] : '',
 
                 !empty($field['button']['url'])? '
-                    <a class="button_1 float_right mt-4" href="'.$field['button']['url'].'" target="'.$field['button']['target'].'">
+                    <a class="button_1 mt-4" href="'.$field['button']['url'].'" target="'.$field['button']['target'].'">
                         <span></span>
                         <span>'.$field['button']['title'] .'</span>
                     </a>
