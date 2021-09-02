@@ -1,6 +1,6 @@
 <div class="<?php echo $field['acf_fc_layout'].'_block'; ?>">
     <div class="row <?php echo ($field['image_on_left_or_right_side'])? 'image_on_left_side' : 'image_on_right_side' ?>">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <?php
             
             $column_1_guide = '
@@ -25,7 +25,7 @@
             
             ?>
         </div>
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <?php
             
             $column_2_guide = '
