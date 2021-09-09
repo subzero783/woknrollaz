@@ -123,9 +123,8 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
     transform: translateY(0);
+    z-index: 2;
   }
   .navbar-toggler {
     display: inline-block;
@@ -568,25 +567,66 @@ body {
   }
   div#wrapper {
     #desktop-and-mobile-header {
-      position: absolute;
       width: 100%;
       vertical-align: middle;
       margin: 0;
       padding: 0;
       z-index: 110;
+      position: absolute;
+      
+      &.sticky_nav_appear {
+
+        position: relative;
+
+        header#ag_header_one.header {
+          max-width: none;
+          background-color: #1d1d1d;
+          top: 0;
+          width: 100%;
+          z-index: 2;
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          
+          > div {
+            height: auto;
+            border: none;
+            max-width: none;
+            margin: 0 0 0 41px;
+            > div:first-child,
+            > div:last-child {
+              display: none;
+            }
+            > div.logo {
+              width: 100%;
+              > a.header-logo {
+                &:before,
+                &:after {
+                  display: none;
+                }
+                > img {
+                  max-width: 80px;
+                  padding: 5px 0;
+                }
+              } 
+            }
+          }
+          > nav {
+            max-width: none;
+            margin: 0 41px 0 0;
+            > ul {
+              margin-bottom: 0;
+              height: auto;
+            }
+          }
+        }
+      }
 
       #ag_header_one.header {
+
         @media only screen and (max-width: 992px) {
           display: none;
-        }
-
-        &.sticky_nav_appear {
-          > div {
-            display: none;
-          }
-          > nav.ag_header_one_first_nav {
-            display: none !important;
-          }
         }
 
         > div {
@@ -693,6 +733,11 @@ body {
             }
           }
         }
+
+        &.sticky_nav_appear {
+
+        }
+
         > nav {
           max-width: 900px;
           display: block;
@@ -706,23 +751,20 @@ body {
             width: 100%;
             transform: translateY(-100%);
             visibility: hidden;
-            transition: transform 0.6s ease;
+            
             z-index: 2;
+
+            position: absolute;
 
             display: flex;
             justify-content: space-between;
             align-items: center;
-
+            
             &.sticky {
               position: fixed;
               visibility: visible;
               transform: translateY(0);
-            }
-
-            &.sticky_nav_default_appear {
-              position: relative;
-              visibility: visible;
-              transform: translateY(0);
+              transition: transform 0.6s ease;
             }
             
             > ul {

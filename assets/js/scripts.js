@@ -76,4 +76,6 @@ jQuery(document).ready(function($){
       $(".navbar-mobile").removeClass("mobile-sticky");
     }
   }
+
+  
 });   
