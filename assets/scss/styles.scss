@@ -579,6 +579,11 @@ body {
         position: relative;
 
         header#ag_header_one.header {
+
+          @media only screen and (max-width: 992px) {
+            display: none;
+          }
+
           max-width: none;
           background-color: #1d1d1d;
           top: 0;
@@ -732,10 +737,6 @@ body {
               }
             }
           }
-        }
-
-        &.sticky_nav_appear {
-
         }
 
         > nav {
@@ -1866,6 +1867,11 @@ body {
       @media only screen and (max-width: 992px){
         padding-top: 94px; 
       } 
+      &.sticky_nav_appear {
+        @media only screen and (max-width: 992px){
+          padding-top: 0; 
+        }
+      }
       .box-from-side {
         position: relative;  
         width: 100%; 

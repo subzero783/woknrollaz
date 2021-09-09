@@ -1,4 +1,5 @@
-<div class="<?php echo $field['acf_fc_layout']; ?>_block">
+<?php $header = get_field('header','options'); ?>
+<div class="<?php echo $field['acf_fc_layout']; ?>_block <?php echo (array_key_exists( 'use_sticky_navigation_as_top_navigation', $header)) ? 'sticky_nav_appear' : ''; ?>">
     <div class="balloons">
         <?php 
             $balloon_guide = '

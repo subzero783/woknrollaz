@@ -20,7 +20,7 @@
 <?php
     // include_once(get_template_directory() . '/parts/popups/popup.loader.php');
     $header = get_field('header','options');
-    $header_sticky_default = $header['use_sticky_navigation_as_top_navigation'];
+    $header_sticky_default = (array_key_exists( 'use_sticky_navigation_as_top_navigation', $header)) ? $header['use_sticky_navigation_as_top_navigation'] : '';
 ?>
     <div id="desktop-and-mobile-header" <?php echo ($header_sticky_default === true) ? 'class="sticky_nav_appear"' : ''; ?>>
     <?php
