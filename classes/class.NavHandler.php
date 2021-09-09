@@ -114,7 +114,7 @@ class NavHandler
                 <nav>
                     %s
                 </nav>
-                <nav class="sticky_nav">
+                <nav class="sticky_nav sticky">
                     %s
                     %s
                 </nav>
