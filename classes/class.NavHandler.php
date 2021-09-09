@@ -98,7 +98,7 @@ class NavHandler
 
 
         $format_header = '
-            <header class="header" id="ag_header_one">
+            <header class="header %s" id="ag_header_one">
                 <div>
                     <div>
                         %s
@@ -111,10 +111,10 @@ class NavHandler
                         %s
                     </div>
                 </div>
-                <nav>
+                <nav class="ag_header_one_first_nav">
                     %s
                 </nav>
-                <nav class="sticky_nav sticky">
+                <nav class="sticky_nav sticky %s">
                     %s
                     %s
                 </nav>
@@ -122,11 +122,13 @@ class NavHandler
         ';
         $this->header_one = sprintf( 
             $format_header,
+            $header['use_sticky_navigation_as_top_navigation'] === true ? 'sticky_nav_appear' : '',
             get_social_icons(),
             $content_logo,
             $header_phone_1,
             $header_phone_2,
             get_site_nav(),
+            $header['use_sticky_navigation_as_top_navigation'] === true ? 'sticky_nav_default_appear' : '',
             $content_logo,
             get_site_nav()
         );

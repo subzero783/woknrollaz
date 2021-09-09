@@ -580,6 +580,15 @@ body {
           display: none;
         }
 
+        &.sticky_nav_appear {
+          > div {
+            display: none;
+          }
+          > nav.ag_header_one_first_nav {
+            display: none !important;
+          }
+        }
+
         > div {
           max-width: 900px;
           margin: 0 auto;
@@ -693,21 +702,29 @@ body {
             padding: 0 41px;
             max-width: none;
             background-color: #1d1d1d;
-            position: absolute;
+            top: 0px; 
+            width: 100%;
             transform: translateY(-100%);
             visibility: hidden;
+            transition: transform 0.6s ease;
             z-index: 2;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
             &.sticky {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
+              position: fixed;
               visibility: visible;
-              position: fixed; /* Make it stick/fixed */
-              top: 0px; /* Hide the navbar 50 px outside of the top view */
-              width: 100%; /* Full width */
               transform: translateY(0);
-              transition: transform 0.6s ease;
             }
+
+            &.sticky_nav_default_appear {
+              position: relative;
+              visibility: visible;
+              transform: translateY(0);
+            }
+            
             > ul {
               margin-bottom: 0;
               justify-content: flex-end;
@@ -1311,7 +1328,7 @@ body {
               > img {
                 max-width: 300px;
               }
-            }
+            } 
           }
         }
       }
