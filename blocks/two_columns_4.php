@@ -1,6 +1,6 @@
 <div class="<?php echo $field['acf_fc_layout'].'_block'; ?>">
-    <div class="row <?php echo 'image_on_' . $field['image_on_left_or_right_side']; ?>">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+    <div class="row <?php echo ($field['image_on_left_or_right_side'])? 'image_on_left_side' : 'image_on_right_side' ?>">
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <?php
             
             $column_1_guide = '
@@ -14,7 +14,7 @@
                 !empty($field['text'])? $field['text'] : '',
 
                 !empty($field['button']['url'])? '
-                    <a class="button_1 mt-4" href="'.$field['button']['url'].'" target="'.$field['button']['target'].'">
+                    <a class="learn_more_link button_1 mt-4" href="'.$field['button']['url'].'" target="'.$field['button']['target'].'">
                         <span></span>
                         <span>'.$field['button']['title'] .'</span>
                     </a>
@@ -25,7 +25,7 @@
             
             ?>
         </div>
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <?php
             
             $column_2_guide = '

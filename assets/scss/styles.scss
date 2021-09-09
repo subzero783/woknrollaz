@@ -1325,12 +1325,23 @@ body {
         align-items: center;
         > .col {
           overflow: hidden;
-          &:nth-child(1){
-            padding: 85px 5% 85px 5%;
-            > a {
-              float: left;
+          padding: 85px 5% 85px 5%;
+          p {
+            a {
+              color: #eb0028;
+              &:hover, 
+              &:active, 
+              &:focus {
+                color: #4a4a4a;
+              }
             }
+          } 
+          a.learn_more_link {
+            float: left;
           }
+        }
+        &.image_on_right_side {
+          flex-direction: row-reverse;
         }
       }
     }

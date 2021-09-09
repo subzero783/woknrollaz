@@ -1274,8 +1274,8 @@
                             "message": "",
                             "default_value": 1,
                             "ui": 1,
-                            "ui_on_text": "Left Side",
-                            "ui_off_text": "Right Side"
+                            "ui_on_text": "Right Side",
+                            "ui_off_text": "Left Side"
                         },
                         {
                             "key": "field_612fd4eb7a97b",
@@ -2769,5 +2769,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1630525679
+    "modified": 1630542372
 }
