@@ -1913,16 +1913,18 @@ body {
       transform: translate(-50%, 0);
       left: 50%;
       bottom: 16%;
-      z-index: 10; 
-      color: #fff;
+      z-index: 10;  
+      color: #fff; 
       padding-top: 7px;
       padding-bottom: 7px;
       @media only screen and (max-width: 768px){
-        width: 100%;
-        text-align: center;
+        // width: 100%;
+        // text-align: center;
         max-width: 180px;
-        padding: 14px 40px;  
+        padding: 14px 40px;
         bottom: 3%;
+        right: -30px;
+        left: unset;
       }
     }
   }
