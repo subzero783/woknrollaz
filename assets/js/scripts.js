@@ -45,7 +45,7 @@ jQuery(document).ready(function($){
     if($(".navbar-collapse").hasClass("ag-show")){
       $(".navbar-collapse").removeClass("ag-show");
     }else{
-      $(".navbar-collapse").addClass("ag-show");
+      $(".navbar-collapse").addClass("ag-show"); 
     }
   });
 
@@ -76,6 +76,13 @@ jQuery(document).ready(function($){
       $(".navbar-mobile").removeClass("mobile-sticky");
     }
   }
+
+  // Masonry Grid Layout
+  $('.masonry-grid').masonry({
+    // options...
+    itemSelector: '.grid-item', 
+    columnWidth: 200
+  }); 
 
   
 });   
