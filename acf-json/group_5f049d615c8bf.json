@@ -89,13 +89,13 @@
                                 "id": ""
                             },
                             "taxonomy": "category",
-                            "field_type": "select",
-                            "allow_null": 0,
+                            "field_type": "checkbox",
                             "add_term": 0,
                             "save_terms": 1,
                             "load_terms": 1,
                             "return_format": "id",
-                            "multiple": 0
+                            "multiple": 0,
+                            "allow_null": 0
                         }
                     ],
                     "min": "",
@@ -2801,5 +2801,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1632173653
+    "modified": 1632174985
 }
