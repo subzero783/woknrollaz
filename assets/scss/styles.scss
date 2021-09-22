@@ -1,10 +1,11 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "node_modules/bootstrap/scss/_modal.scss";
 @import "node_modules/slick-carousel/slick/slick.scss";
 @import "node_modules/slick-carousel/slick/slick-theme.scss";
 
 blockquote,
 body {
-  line-height: 25px;
+  line-height: 25px; 
 }
 
 body {
@@ -933,6 +934,54 @@ body {
   }
 
   main {
+    &#single-event-content { 
+      .single-event-title-container {
+        > h2 {
+          text-align: center;
+          font-size: 40px;
+          margin-top: 50px;
+        }
+      }
+      .slick-slider-container {
+        > .single-event-images-slick-slider {
+          display: flex;
+          margin: 50px auto;
+          width: 800px;
+          height: 500px;
+          flex-flow: row nowrap;
+          > .slick-arrow {
+            &:before {
+              display: none;
+            }
+            > .svg-inline--fa {
+              color: #eb0028;
+              font-size: 30px;
+            }
+          }
+          > .slick-list {
+            width: 100%;
+            .slick-slide {
+              background-color: #000;
+              height: 100%;
+              width: 100%;
+              .slide-image {
+                max-height: 500px;
+                width:auto !important;
+                display: block !important;
+                margin: 0 auto;
+              }
+            } 
+          }
+        }
+      }
+      .container {
+        .masonry-grid {
+          > div.grid-item {
+            padding: 10px !important;
+          }
+        }
+      }
+    }
     .headline_and_video_block {
       background-color: #1d1d1d;
       padding: 100px 15px;
@@ -1001,7 +1050,12 @@ body {
       .container {
         .masonry-grid {
           .grid-item {
-            max-width: 200px;  
+            .featured-image-container {
+              > img {
+                width: 100%;
+                height: auto;
+              }
+            }
           }
         }
       }
@@ -1917,6 +1971,7 @@ body {
         }
       } 
     }
+
     a.button {
       position: absolute;
       transform: translate(-50%, 0);
