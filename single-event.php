@@ -24,41 +24,27 @@ get_header();
                 </div>
                 
                 <div class="container">
-                    <div class="masonry-grid row">
+                    <div class="masonry-grid">
                         %s
                     </div>
                 </div>
 
                 <div class="slick-slider-container">
-                    %s
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                      </div>
+                    <div class="slick-first-container">
+                        <a href="javascript:;" class="modal-close">
+                            <span>&times;</span>
+                        </a>
+                        %s
                     </div>
-                  </div>
                 </div>
             
             ';
 
             $event_single_masonry_guide = '
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 grid-item">
-                    <img data-toggle="modal" data-target="#exampleModalLong" src="%s" alt="%s" />
+                <div class="grid-item">
+                    <a href="javascript:;" class="modal-button">
+                        <img src="%s" alt="%s" />
+                    </a>
                 </div>
             ';
 
@@ -96,17 +82,11 @@ get_header();
                 get_the_title(),
 
                 $event_masonry,
-
+                
                 $event_slider,
-
             );
 
             echo $single_event_content;
-?>
-        
-
-        
-<?php 
         endwhile; 
     endif; 
 ?>

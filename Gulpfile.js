@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-// const browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
@@ -69,8 +69,8 @@ function minify_js(){
       './node_modules/jquery-lazy/jquery.lazy.min.js',
       // './node_modules/jquery/dist/jquery.min.js',
       './node_modules/aos/dist/aos.js',
-      './node_modules/bootsrap/dist/js/bootstrap.bundle.js',
-      // './node_modules/bootsrap/dist/js/bootstrap.min.js',
+      './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+      // './node_modules/bootstrap/js/dist/modal.js',
       './node_modules/slick-carousel/slick/slick.js',
       // masonry grid layout
       './node_modules/masonry-layout/dist/masonry.pkgd.min.js',
@@ -121,18 +121,16 @@ function rev_dist_clean(){
 }
 
 function watch() {
-  // browserSync.init({
-  //   proxy: "http://localhost/woknrollaz/"
-  // });
+  browserSync.init({
+    proxy: "http://localhost/woknrollaz/"
+  });
   gulp.watch('assets/scss/**/*.scss', gulp.series(style, cacheBustTask));
   gulp.watch('assets/vendor/**/*.css', gulp.series(style, cacheBustTask));
   gulp.watch('assets/js/**/*.js', minify_js);
-  // gulp.watch('./**/*.php').on('change',browserSync.reload);
-  // gulp.watch('assets/dist/css/style.min.css').on('change', gulp.series(browserSync.reload));
+  gulp.watch('./**/*.php').on('change',browserSync.reload);
+  gulp.watch('assets/dist/css/style.min.css').on('change', gulp.series(browserSync.reload));
   // gulp.watch('assets/dist/css/rev-manifest.json').on('change', rev_dist_clean);
 }
-
-
 
 exports.style = style;
 exports.minify_js = minify_js;

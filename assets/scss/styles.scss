@@ -935,6 +935,7 @@ body {
 
   main {
     &#single-event-content { 
+      position: relative;
       .single-event-title-container {
         > h2 {
           text-align: center;
@@ -943,11 +944,41 @@ body {
         }
       }
       .slick-slider-container {
-        > .single-event-images-slick-slider {
+        position: fixed;
+        top: 50%;
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        z-index: 111;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        padding-top: 10%;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        .slick-first-container {
+          max-width: 800px;
+          display: block;
+          margin: 0 auto;
+          position: relative;
+          > a.modal-close {
+            opacity: 1;
+            color: #fff;
+            font-size: 40px;
+            position: absolute;
+            text-decoration: none;
+            right: 0;
+            top: -30px;
+            &:hover, 
+            &:active, 
+            &:focus {
+              text-decoration: none;
+            }
+          }
+        }
+        .single-event-images-slick-slider {
           display: flex;
-          margin: 50px auto;
-          width: 800px;
-          height: 500px;
+          width: 100%;
           flex-flow: row nowrap;
           > .slick-arrow {
             &:before {
@@ -960,26 +991,46 @@ body {
           }
           > .slick-list {
             width: 100%;
-            .slick-slide {
-              background-color: #000;
-              height: 100%;
-              width: 100%;
-              .slide-image {
-                max-height: 500px;
-                width:auto !important;
-                display: block !important;
-                margin: 0 auto;
-              }
-            } 
+            .slick-track {
+              .slick-slide {
+                background-color: #000;
+                height: 100%;
+                width: 100%;
+                .slide-image {
+                  max-height: 500px;
+                  width:auto !important;
+                  display: block !important;
+                  margin: 0 auto;
+                }
+              } 
+            }
           }
         }
       }
       .container {
         .masonry-grid {
+          display: none;
+          flex-flow: row wrap;
+          margin: 4% 0;
           > div.grid-item {
-            padding: 10px !important;
+            width: 25%;
+            box-sizing: border-box;
+            @media only screen and (max-width: 960px){
+              width: 33%
+            }
+            @media only screen and (max-width: 768px){
+              width: 50% 
+            }
+            > a {
+              > img {
+                padding: 5px;
+              }
+            }
           }
         }
+      }
+      .ag-modal {
+        
       }
     }
     .headline_and_video_block {
