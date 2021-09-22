@@ -31,9 +31,7 @@ get_header();
 
                 <div class="slick-slider-container">
                     <div class="slick-first-container">
-                        <a href="javascript:;" class="modal-close">
-                            <span>&times;</span>
-                        </a>
+
                         %s
                     </div>
                 </div>
@@ -57,7 +55,17 @@ get_header();
             foreach(get_field('event_images') as $event_image){
 
                 $event_slider .= '
-                    <img class="slide-image" src="'.$event_image['image']['url'].'" alt="'.$event_image['image']['alt'].'" />
+                    <div class="slide-image">
+                        <div class="close-and-download-container">
+                            <a class="download-image-button" href="'.$event_image['image']['url'].'" download><i class="fas fa-download"></i></a>
+                            <a href="javascript:;" class="modal-close">
+                                <i class="fas fa-window-close"></i>
+                            </a>
+                        </div>
+                        <div class="image-container">
+                            <img href="'.$event_image['image']['url'].'" src="'.$event_image['image']['url'].'" alt="'.$event_image['image']['alt'].'" />
+                        </div>
+                    </div>
                 ';
 
                 $event_masonry .= sprintf(

@@ -961,46 +961,88 @@ body {
           display: block;
           margin: 0 auto;
           position: relative;
-          > a.modal-close {
-            opacity: 1;
-            color: #fff;
-            font-size: 40px;
-            position: absolute;
-            text-decoration: none;
-            right: 0;
-            top: -30px;
-            &:hover, 
-            &:active, 
-            &:focus {
-              text-decoration: none;
-            }
+          @media only screen and (max-width: 960px){
+            width: 80%;
           }
+
         }
         .single-event-images-slick-slider {
           display: flex;
           width: 100%;
           flex-flow: row nowrap;
           > .slick-arrow {
+            overflow: visible;
+            width: auto;
+            height: auto;
             &:before {
               display: none;
             }
             > .svg-inline--fa {
               color: #eb0028;
-              font-size: 30px;
+              font-size: 45px;
             }
           }
           > .slick-list {
             width: 100%;
+            overflow: visible;
             .slick-track {
+              display: flex;
+              align-items: center;
               .slick-slide {
-                background-color: #000;
                 height: 100%;
                 width: 100%;
                 .slide-image {
-                  max-height: 500px;
-                  width:auto !important;
-                  display: block !important;
-                  margin: 0 auto;
+                  > .close-and-download-container {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    > a {
+                      width: 50%;
+                      display: block;
+                      > svg {
+                        box-shadow: 5px 10px #000;
+                      }
+                      &.download-image-button {
+                        color: #eb0028;
+                        text-decoration: none;
+                        text-align: left;
+                        font-size: 25px;
+                        position: relative;
+                        top: -5px;
+                      }
+                      &.modal-close {
+                        opacity: 1;
+                        text-decoration: none;
+                        position: relative;
+                        right: 0;
+                        color: #eb0028;
+                        font-size: 25px;
+                        right: 0;
+                        top: -5px;
+                        text-align: right;
+                        &:hover, 
+                        &:active, 
+                        &:focus {
+                          text-decoration: none;
+                        }
+                      }
+                    }
+                  }
+                  .image-container {
+                    background-color: #000;
+                    img {
+                      max-height: 500px;
+                      width: auto !important;
+                      display: block !important;
+                      margin: 0 auto;
+                      @media only screen and (max-width: 768px){
+                        width: 100% !important;
+                        max-height: none;
+                      }
+                    }
+                  }
                 }
               } 
             }
