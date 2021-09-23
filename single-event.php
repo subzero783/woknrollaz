@@ -57,8 +57,8 @@ get_header();
                 $event_slider .= '
                     <div class="slide-image">
                         <div class="close-and-download-container">
-                            <a class="download-image-button" href="'.$event_image['image']['url'].'" download><i class="fas fa-download"></i></a>
-                            <a href="javascript:;" class="modal-close">
+                            <a class="download-image-button" href="'.$event_image['image']['url'].'" download title="Download Image"><i class="fas fa-download"></i></a>
+                            <a href="javascript:;" class="modal-close" title="Close Slider">
                                 <i class="fas fa-window-close"></i>
                             </a>
                         </div>
@@ -87,7 +87,7 @@ get_header();
 
                 $single_event_guide, 
 
-                get_the_post_thumbnail_url(),
+                get_field('header_background_image')['url'],
 
                 get_the_title(),
 

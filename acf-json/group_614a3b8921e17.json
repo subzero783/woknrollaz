@@ -3,6 +3,30 @@
     "title": "Event Blog Post Images",
     "fields": [
         {
+            "key": "field_614d09ac769d5",
+            "label": "Header Background Image",
+            "name": "header_background_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_614a3b92382d8",
             "label": "Event Images",
             "name": "event_images",
@@ -65,5 +89,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632424440
+    "modified": 1632438722
 }

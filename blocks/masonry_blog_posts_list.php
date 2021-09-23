@@ -21,7 +21,7 @@
 
                     $grid_item_format = '
 
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 grid-item">
+                        <div class="grid-item">
                             <a href="%s" target="_self" class="grid-item-link">
                                 <div class="featured-image-container">%s</div>
                                 <div class="date-container">%s</div>

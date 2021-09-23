@@ -934,6 +934,28 @@ body {
   }
 
   main {
+    .container {
+      .masonry-grid {
+        display: none;
+        flex-flow: row wrap;
+        margin: 4% 0;
+        > div.grid-item {
+          width: 25%;
+          box-sizing: border-box;
+          @media only screen and (max-width: 960px){
+            width: 33%
+          }
+          @media only screen and (max-width: 768px){
+            width: 50% 
+          }
+          > a {
+            > img {
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
     &#single-event-content { 
       position: relative;
       .single-event-title-container {
@@ -1046,31 +1068,7 @@ body {
           }
         }
       }
-      .container {
-        .masonry-grid {
-          display: none;
-          flex-flow: row wrap;
-          margin: 4% 0;
-          > div.grid-item {
-            width: 25%;
-            box-sizing: border-box;
-            @media only screen and (max-width: 960px){
-              width: 33%
-            }
-            @media only screen and (max-width: 768px){
-              width: 50% 
-            }
-            > a {
-              > img {
-                padding: 5px;
-              }
-            }
-          }
-        }
-      }
-      .ag-modal {
-        
-      }
+
     }
     .headline_and_video_block {
       background-color: #1d1d1d;
@@ -1136,20 +1134,20 @@ body {
         }
       }
     }
-    .masonry_blog_posts_list_block {
-      .container {
-        .masonry-grid {
-          .grid-item {
-            .featured-image-container {
-              > img {
-                width: 100%;
-                height: auto;
-              }
-            }
-          }
-        }
-      }
-    }
+    // .masonry_blog_posts_list_block {
+    //   .container {
+    //     .masonry-grid {
+    //       .grid-item {
+    //         .featured-image-container {
+    //           > img {
+    //             width: 100%;
+    //             height: auto;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
     .headline_with_background_image_block {
       background-color: #fff;
       padding: 100px 15px 50px;
