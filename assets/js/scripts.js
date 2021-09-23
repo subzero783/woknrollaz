@@ -103,7 +103,7 @@ jQuery(document).ready(function($){
           $('.masonry-grid').css({
             'display' : 'flex'
           }).masonry({
-            // options...
+            // options... 
             itemSelector: '.grid-item'
           }); 
           $('.single-event-images-slick-slider').slick({

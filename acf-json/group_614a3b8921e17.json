@@ -51,9 +51,9 @@
     "location": [
         [
             {
-                "param": "post_category",
+                "param": "post_template",
                 "operator": "==",
-                "value": "category:event"
+                "value": "single-event.php"
             }
         ]
     ],
@@ -65,5 +65,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632255126
+    "modified": 1632424440
 }

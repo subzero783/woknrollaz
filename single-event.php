@@ -14,7 +14,7 @@ get_header();
 
             $single_event_guide = '
             
-                <div class="hero_1_block parallax-window" data-parallax="scroll" data-image-src="'.get_site_url().'/wp-content/uploads/new-slider-image-02.jpg">
+                <div class="hero_1_block parallax-window" data-parallax="scroll" data-image-src="%s">
                     <span>
                         <h1>%s</h1>
                     </span>
@@ -86,6 +86,8 @@ get_header();
             $single_event_content = sprintf(
 
                 $single_event_guide, 
+
+                get_the_post_thumbnail_url(),
 
                 get_the_title(),
 
