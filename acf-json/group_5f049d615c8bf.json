@@ -69,6 +69,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6148fb9f9c91b": {
+                    "key": "layout_6148fb9f9c91b",
+                    "name": "masonry_blog_posts_list",
+                    "label": "Masonry Blog Posts List",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6148fc0e9c91c",
+                            "label": "Category of Blog Posts",
+                            "name": "category_of_blog_posts",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "field_type": "checkbox",
+                            "add_term": 0,
+                            "save_terms": 1,
+                            "load_terms": 1,
+                            "return_format": "id",
+                            "multiple": 0,
+                            "allow_null": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_610c2fa875cde": {
                     "key": "layout_610c2fa875cde",
                     "name": "banner_1",
@@ -2769,5 +2801,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1630542372
+    "modified": 1632174985
 }
