@@ -13,7 +13,7 @@
         $result = new WP_Query( $args );
 
     ?>
-    <div class="container">
+    <div class="container masonry-grid-container">
         <div class="masonry-grid">
         <?php 
             if( $result->have_posts() ):
@@ -22,7 +22,7 @@
                     $grid_item_format = '
 
                         <div class="grid-item">
-                            <a href="%s" target="_self" class="grid-item-link">
+                            <a href="%s" target="_self" class="grid-item-link single-event-link">
                                 <div class="featured-image-container">%s</div>
                                 <div class="date-container">%s</div>
                                 <div class="title-container">%s</div>

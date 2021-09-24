@@ -932,9 +932,13 @@ body {
       display: none;
     }
   }
-
+  /*
+  <div class="featured-image-container">%s</div>
+  <div class="date-container">%s</div>
+  <div class="title-container">%s</div>
+  */
   main {
-    .container {
+    .masonry-grid-container {
       .masonry-grid {
         display: none;
         flex-flow: row wrap;
@@ -951,6 +955,52 @@ body {
           > a {
             > img {
               padding: 5px;
+            }
+          }
+          > a.single-event-link {
+            background: #1d1d1d;
+            display: block;
+            > .featured-image-container {
+              > img {
+                width: 100%;
+                height: auto;
+              }
+            }
+            > .date-container {
+              > h4 {
+                color: #fff;
+                text-align: center;
+                margin: 0;
+                font-size: 18px;
+                padding: 10px 5px 0;
+              }
+            }
+            > .title-container {
+              > h3 {
+                font-size: 20px;
+                text-align: center;
+                padding: 10px 5px 10px;
+                color: #fff;
+                margin: 0;
+              }
+            }
+            &:after {
+              transition: box-shadow .2s ease-in-out;
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+              top: 0;
+              right: 0;
+            }
+            &:hover, 
+            &:active, 
+            &:focus {
+              text-decoration: none;
+              &:after {
+                box-shadow: 15px 15px 0 rgba(235, 0, 40, 0.3);
+              }
             }
           }
         }

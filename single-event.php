@@ -23,7 +23,7 @@ get_header();
                     <h2>Event Gallery</h2>
                 </div>
                 
-                <div class="container">
+                <div class="container masonry-grid-container">
                     <div class="masonry-grid">
                         %s
                     </div>
