@@ -106,10 +106,8 @@ jQuery(document).ready(function($){
     e.preventDefault();
 
     var masonry_img_src = $(this).children('img').attr('src');
-    console.log(masonry_img_src);
 
     var masonry_img_slide_index = $('.slick-slider-container').find('img[src="'+masonry_img_src+'"]').parents('.slick-slide').attr('data-slick-index');
-    console.log(masonry_img_slide_index);
     
     $('.single-event-images-slick-slider').slick('slickGoTo', masonry_img_slide_index);
 
