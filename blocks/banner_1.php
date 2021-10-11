@@ -33,7 +33,7 @@
     <?php
         } 
     ?>
-    <div class="box-from-side <?php ?>">
+    <div class="<?php echo ($field['use_balloons_and_camel'])? 'box-from-side' : 'images-container'; ?>">
         <img class="banner-image" src="<?php echo !empty($field['background_image']['url'])? $field['background_image']['url'] : ''; ?>" alt="<?php echo !empty($field['background_image']['alt'])? $field['background_image']['alt'] : ''; ?>" />
         <img class="banner-image mobile-banner-image" src="<?php echo !empty($field['mobile_background_image']['url'])? $field['mobile_background_image']['url'] : ''; ?>" alt="<?php echo !empty($field['mobile_background_image']['alt'])? $field['mobile_background_image']['alt'] : ''; ?>" />
         
