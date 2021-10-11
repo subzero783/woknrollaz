@@ -156,13 +156,40 @@
                             "mime_types": ""
                         },
                         {
+                            "key": "field_61647b239de1c",
+                            "label": "Use Balloons and Camel",
+                            "name": "use_balloons_and_camel",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_6111c7e778a50",
                             "label": "Animal Image",
                             "name": "animal_image",
                             "type": "image",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_61647b239de1c",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -2801,5 +2828,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1632174985
+    "modified": 1633975117
 }
