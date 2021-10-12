@@ -2112,20 +2112,39 @@ body {
       position: absolute;
       transform: translate(-50%, 0);
       left: 50%;
-      bottom: 16%;
+      bottom: 50%;
       z-index: 10;  
       color: #fff; 
       padding-top: 7px;
       padding-bottom: 7px;
+      background-color: #1d1d1d;
+      
       @media only screen and (max-width: 768px){
-        // width: 100%;
-        // text-align: center;
-        max-width: 180px;
-        padding: 14px 40px;
-        bottom: 3%;
-        right: -30px;
-        left: unset;
+        background-color:rgba(235, 0, 40, 1);
+        bottom: 10%;
+        width: 100% !important;
+        text-align: center;
+        max-width: 201px;
+        padding: 9px 40px;
       }
+      &:hover,
+      &:active,
+      &:focus {
+        color: #1d1d1d;
+        > span:nth-child(1) {
+          height: 100%;
+        }
+        > span:nth-child(2){
+          &:before,
+          &:after {
+            color: #1d1d1d !important;
+          }
+        }
+      }
+      > span:nth-child(1) {
+        background-color: #fff;
+      }
+
     }
   }
   .form_with_locations_1_block {
