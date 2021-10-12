@@ -2060,8 +2060,10 @@ body {
       background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(209, 209, 209, 1) 32%, rgba(255, 255, 255, 1) 100%);
       position: relative;
       overflow: hidden; 
+      margin-top: -30px;
       @media only screen and (max-width: 992px){
         padding-top: 94px; 
+        margin-top: 0;
       } 
       &.sticky_nav_appear {
         @media only screen and (max-width: 992px){
