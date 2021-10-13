@@ -69,6 +69,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6148fb9f9c91b": {
+                    "key": "layout_6148fb9f9c91b",
+                    "name": "masonry_blog_posts_list",
+                    "label": "Masonry Blog Posts List",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6148fc0e9c91c",
+                            "label": "Category of Blog Posts",
+                            "name": "category_of_blog_posts",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "field_type": "checkbox",
+                            "add_term": 0,
+                            "save_terms": 1,
+                            "load_terms": 1,
+                            "return_format": "id",
+                            "multiple": 0,
+                            "allow_null": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_610c2fa875cde": {
                     "key": "layout_610c2fa875cde",
                     "name": "banner_1",
@@ -124,13 +156,40 @@
                             "mime_types": ""
                         },
                         {
+                            "key": "field_61647b239de1c",
+                            "label": "Use Balloons and Camel",
+                            "name": "use_balloons_and_camel",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_6111c7e778a50",
                             "label": "Animal Image",
                             "name": "animal_image",
                             "type": "image",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_61647b239de1c",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -1247,6 +1306,125 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_612fd4eb7a97a": {
+                    "key": "layout_612fd4eb7a97a",
+                    "name": "two_columns_4",
+                    "label": "Two Columns 4",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_612fd66b7f1cf",
+                            "label": "Image on Left or Right Side",
+                            "name": "image_on_left_or_right_side",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "Right Side",
+                            "ui_off_text": "Left Side"
+                        },
+                        {
+                            "key": "field_612fd4eb7a97b",
+                            "label": "First Column",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_612fd4eb7a97c",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_612fd4eb7a97d",
+                            "label": "Button",
+                            "name": "button",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_612fd4eb7a97e",
+                            "label": "Second Column",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_612fd4f87a980",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         }
                     ],
                     "min": "",
@@ -2650,5 +2828,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1628632943
+    "modified": 1633975117
 }

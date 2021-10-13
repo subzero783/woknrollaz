@@ -111,7 +111,7 @@ class NavHandler
                         %s
                     </div>
                 </div>
-                <nav>
+                <nav class="ag_header_one_first_nav">
                     %s
                 </nav>
                 <nav class="sticky_nav">
@@ -122,6 +122,7 @@ class NavHandler
         ';
         $this->header_one = sprintf( 
             $format_header,
+            // $header['use_sticky_navigation_as_top_navigation'] === true ? 'sticky_nav_appear' : '',
             get_social_icons(),
             $content_logo,
             $header_phone_1,

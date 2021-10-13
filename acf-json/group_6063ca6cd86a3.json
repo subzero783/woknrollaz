@@ -34,6 +34,25 @@
             "layout": "row",
             "sub_fields": [
                 {
+                    "key": "field_61394f7fcae86",
+                    "label": "Use Sticky Navigation as Top Navigation",
+                    "name": "use_sticky_navigation_as_top_navigation",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
                     "key": "field_606b5759bbd11",
                     "label": "Select Style",
                     "name": "select_style",
@@ -975,5 +994,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1628787117
+    "modified": 1631836754
 }
