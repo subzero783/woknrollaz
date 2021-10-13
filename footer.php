@@ -32,7 +32,7 @@
 <div id="footer_1" role="contentinfo">
 	<div class="container">
 		<div class="row">
-			<div class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+			<div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                 <?php 
                     if($footer_info['column_1_titles_and_text']){
                         footer_column_content($footer_info['column_1_titles_and_text']);
@@ -41,7 +41,7 @@
                     echo ($footer_info['add_shortcode_1'] == true)? '<div class="form_container_1">'.do_shortcode($footer_info['shortcode_1']).'</div>' : '';
                 ?>
 			</div>
-			<div class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+			<div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                 <?php
                     if($footer_info['column_2_titles_and_text']){
                         footer_column_content($footer_info['column_2_titles_and_text']);
@@ -50,7 +50,7 @@
                     echo ($footer_info['add_shortcode_2'] == true)? '<div class="form_container_1">'.do_shortcode($footer_info['shortcode_2']).'</div>' : '';
                 ?>
 			</div>
-			<div class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+			<div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                 <?php
                     if($footer_info['column_3_titles_and_text']){
                         footer_column_content($footer_info['column_3_titles_and_text']);
@@ -59,15 +59,15 @@
                     echo ($footer_info['add_shortcode_3'] == true)? '<div class="form_container_1">'.do_shortcode($footer_info['shortcode_3']).'</div>' : '';
                 ?>
 			</div>
-			<div class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+			<!-- <div class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
                 <?php 
-                    if($footer_info['column_4_titles_and_text']){
-                        footer_column_content($footer_info['column_4_titles_and_text']);
-                    }
-                    echo ($footer_info['add_social_icons_4'] == true)? get_social_icons() : '';
-                    echo ($footer_info['add_shortcode_4'] == true)? '<div class="form_container_1">'.do_shortcode($footer_info['shortcode_4']).'</div>' : '';
+                    // if($footer_info['column_4_titles_and_text']){
+                    //     footer_column_content($footer_info['column_4_titles_and_text']);
+                    // }
+                    // echo ($footer_info['add_social_icons_4'] == true)? get_social_icons() : '';
+                    // echo ($footer_info['add_shortcode_4'] == true)? '<div class="form_container_1">'.do_shortcode($footer_info['shortcode_4']).'</div>' : '';
                 ?>
-			</div>
+			</div> -->
 		</div>
 
 	</div>

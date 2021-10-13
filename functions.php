@@ -243,3 +243,20 @@ function google_tag_manager(){
         </script>
 <?php
 }
+
+// Admin side CSS
+add_action('admin_head', 'my_custom_admin_css');
+function my_custom_admin_css() {
+?>
+  <style>
+      div[data-name^='column_4_temporary_disabled_group']{
+          display: none;
+      }
+  </style>
+<?php
+}
+
+// Remove Wordpress site users from sitemap.xml
+add_filter( 'wp_sitemaps_add_provider', function ($provider, $name) {
+    return ( $name == 'users' ) ? false : $provider;
+  }, 10, 2);
