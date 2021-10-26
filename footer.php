@@ -30,7 +30,7 @@
 ?>
 
 <div id="footer_1" role="contentinfo">
-	<div id="contact" class="container">
+	<div class="container">
 		<div class="row">
 			<div class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
                 <?php 
@@ -71,7 +71,7 @@
 		</div>
 
 	</div>
-    <div class="container">
+    <div class="container" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
