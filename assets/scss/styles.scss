@@ -290,6 +290,28 @@ body {
       }
     }
   }
+  #content-page-not-found {
+    .container {
+      padding: 150px 0;
+      > .row {
+        > .col {
+          text-align: center;
+          h1 {
+            font-weight: 700;
+            color: #1d1d1d;
+            letter-spacing: -0.03em;
+            font-family: "Montserrat", sans-serif;
+          }
+          p {
+            color: #1d1d1d;
+          }
+          a { 
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
   &.error404 {
     #content-page-not-found {
       .container {
@@ -2627,12 +2649,11 @@ body {
   }
   > #floating_signup {
     position: fixed;
-    
     z-index: 1000;
+    bottom: 20px;
     max-width: 240px;
     &.open {
       right: 10px;
-      bottom: 10px;
       @media only screen and (max-width: 768px){
         right: 0;
         bottom: 10px;
