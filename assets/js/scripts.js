@@ -38,6 +38,20 @@ jQuery(document).ready(function($){
     adaptiveHeight: false
   });
 
+  //Video play
+  $('.video_wrapper, .video_play_button').on('click', function(e){
+
+    console.log('video_wrapper clicked');
+
+    e.preventDefault();
+    // if( !$(this).find('.video_play_button').hasClass('hidden_play_button') ){
+      $(this).find('.video_cover_image').hide();
+      $(this).find('.video_play_button').hide();
+      $(this).find('.video_play_button').addClass('hidden_play_button');
+      $(this).find('.video-html').get(0).play();
+    // }
+  });
+
 
 
   var images = document.querySelectorAll(".lazyload");
