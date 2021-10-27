@@ -90,13 +90,16 @@
         if($footer_info['show_floating_signup']){
 
             $floating_signup_guide = '
-                <div id="floating_signup">
-                    <div class="close-float-signup"><i class="fas fa-times-circle"></i></div>
-                    <div>
-                        %s
-                    </div>
-                    <div>
-                        %s
+                <div id="floating_signup" class="open">
+                    <div class="close-float-signup open"><i class="fas fa-times-circle"></i></div>
+                    <div class="open-float-signup closed"><i class="fas fa-envelope-open"></i></div>
+                    <div id="content" class="open">
+                        <div>
+                            %s
+                        </div>
+                        <div>
+                            %s
+                        </div>
                     </div>
                 </div>
             ';

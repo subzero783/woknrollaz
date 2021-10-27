@@ -193,7 +193,7 @@ function blankslate_load_scripts()
 
     wp_enqueue_style('animations-css', get_stylesheet_directory_uri() . '/assets/css/animations-5.css?r='.rand(10,1000) );
     
-    wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri() . '/assets/dist/js/scripts5.min.js?r='.rand(10,1000), array('jquery'), '3.6.0', true);
+    wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri() . '/assets/dist/js/scripts.min.js?r='.rand(10,1000), array('jquery'), '3.6.0', true);
 }
 
 /* 2.3 GET CACHE-BUSTED CSS FILE

@@ -2627,15 +2627,27 @@ body {
   }
   > #floating_signup {
     position: fixed;
-    right: 10px;
-    bottom: 10px;
+    bottom: 20px;
     z-index: 1000;
     max-width: 240px;
-    > div:nth-of-type(1).close-float-signup {
+    &.open {
+      right: 10px;
+    }
+    &.closed {
+      right: 0;
+    }
+    > div.close-float-signup,
+    > div.open-float-signup {
       position: relative;
       top: 20px;
       left: -5px;
       width: fit-content;
+      &.open {
+        display: block;
+      }
+      &.closed {
+        display: none;
+      }
       &:hover, 
       &:active, 
       &:focus {
@@ -2648,59 +2660,99 @@ body {
         font-size: 25px;
       }
     }
-    > div:nth-of-type(2) {
-      background-color: #eb0028;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-      padding: 5px 10px 10px;
-      > h3 {
-        font-family: "Montserrat", sans-serif !important;
-        font-size: 16px;
-        text-align: center;
-        font-weight: 500;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-        text-transform: unset;
+    > div.open-float-signup {
+      position: relative;
+      top: 20px;
+      left: 0px;
+      width: 40px;
+      height: 40px;
+      background-color:rgba(235, 0, 40, 1);
+      > svg {
+        background: unset; 
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
       }
     }
-    > div:nth-of-type(3){
-      background-color: #eb0028;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      padding: 0 10px 10px;
-      #mc_embed_signup_scroll {
-        display: flex;
-        align-items: center;
-        flex-flow: column nowrap;
-        #mce-responses,
-        .do-not-remove-this {
-          display:none;
+    > div#content {
+      &.open {
+        display: block;
+      }
+      &.closed {
+        display: none;
+      }
+      > div:nth-of-type(1) {
+        background-color: #eb0028;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 5px 10px 10px;
+        > h3 {
+          font-family: "Montserrat", sans-serif !important;
+          font-size: 16px;
+          text-align: center;
+          font-weight: 500;
+          color: #fff;
+          margin: 0;
+          padding: 0;
+          text-transform: unset;
         }
-        .mc-field-group {
-          width: 100%;
-          padding: 0 0 10px 0;
-          #mce-EMAIL {
-            width: 100%;
-            font-size: 14px;
-            padding: 5px 5px;
-            border: unset;
+      }
+      > div:nth-of-type(2){
+        background-color: #eb0028;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        padding: 0 10px 10px;
+        #mc_embed_signup_scroll {
+          display: flex;
+          align-items: center;
+          flex-flow: column nowrap;
+          #mce-responses,
+          .do-not-remove-this {
+            display:none;
           }
-          label {
-            display: none;
+          .mc-field-group:nth-of-type(1) {
+            label {
+              display:none;
+            }
           }
-        }
-        .clear {
-          width: 100%;
-          input {
+          .mc-field-group:nth-of-type(2){
+            label {
+              color: #fff;
+              text-align: center;
+              display: block;
+            }
+            select {
+              width: 100%;
+              border: unset;
+            }
+          }
+          .mc-field-group:nth-of-type(1),
+          .mc-field-group:nth-of-type(2) {
             width: 100%;
-            font-size: 14px;
-            border: unset !important;
-            background-color: #1d1d1d;
-            color: #fff;
-            border-radius: 5px;
-            padding: 5px;
-            text-transform: uppercase;
+            padding: 0 0 10px 0;
+            #mce-EMAIL,
+            select {
+              width: 100%;
+              font-size: 14px;
+              padding: 5px 5px;
+              border: unset;
+            }
+          }
+          .clear {
+            width: 100%;
+            input {
+              width: 100%;
+              border: unset !important;
+              background-color: #1d1d1d;
+              color: #fff;
+              border-radius: 5px;
+              padding: 5px;
+              text-transform: uppercase;
+              font-family: "Montserrat", sans-serif;
+              font-weight: 600;
+              font-size: 13px;
+            }
           }
         }
       }
@@ -2757,14 +2809,10 @@ body {
           }
         }
       }
-      > span {
+      > span,
+      > span > input,
+      > span > textarea {
         width: 100%;
-        > input {
-          width: 100%;
-        }
-        textarea {
-          width: 100%;
-        }
       }
     }
   }
