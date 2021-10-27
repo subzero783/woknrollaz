@@ -86,6 +86,28 @@
             </div>
         </div>
     </div>
+    <?php
+        if($footer_info['show_floating_signup']){
+
+            $floating_signup_guide = '
+                <div id="floating_signup">
+                    <div><i class="fas fa-times-circle"></i></div>
+                    <div>
+                        %s
+                    </div>
+                    <div>
+                        %s
+                    </div>
+                </div>
+            ';
+            $floating_signup_content = sprintf(
+                $floating_signup_guide, 
+                !empty($footer_info['floating_signup_headline'])? '<h3>'.$footer_info['floating_signup_headline'].'</h3>' : '',
+                !empty($footer_info['floating_signup_code'])? $footer_info['floating_signup_code'] : ''
+            );
+            echo $floating_signup_content;
+        }
+    ?>
 </div>
 	<?php wp_footer(); ?>
 </body>

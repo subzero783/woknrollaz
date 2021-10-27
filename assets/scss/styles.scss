@@ -2625,6 +2625,87 @@ body {
       }
     }
   }
+  > #floating_signup {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1000;
+    max-width: 240px;
+    > div:nth-of-type(1).close-float-signup {
+      position: relative;
+      top: 20px;
+      left: -5px;
+      width: fit-content;
+      &:hover, 
+      &:active, 
+      &:focus {
+        cursor: pointer;
+      }
+      > svg {
+        border-radius: 100px;
+        background: #000;
+        color: #fff;
+        font-size: 25px;
+      }
+    }
+    > div:nth-of-type(2) {
+      background-color: #eb0028;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      padding: 5px 10px 10px;
+      > h3 {
+        font-family: "Montserrat", sans-serif !important;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 500;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        text-transform: unset;
+      }
+    }
+    > div:nth-of-type(3){
+      background-color: #eb0028;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      padding: 0 10px 10px;
+      #mc_embed_signup_scroll {
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+        #mce-responses,
+        .do-not-remove-this {
+          display:none;
+        }
+        .mc-field-group {
+          width: 100%;
+          padding: 0 0 10px 0;
+          #mce-EMAIL {
+            width: 100%;
+            font-size: 14px;
+            padding: 5px 5px;
+            border: unset;
+          }
+          label {
+            display: none;
+          }
+        }
+        .clear {
+          width: 100%;
+          input {
+            width: 100%;
+            font-size: 14px;
+            border: unset !important;
+            background-color: #1d1d1d;
+            color: #fff;
+            border-radius: 5px;
+            padding: 5px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
 }
 .form_container_1 {
   form {
