@@ -91,7 +91,7 @@
 
             $floating_signup_guide = '
                 <div id="floating_signup">
-                    <div><i class="fas fa-times-circle"></i></div>
+                    <div class="close-float-signup"><i class="fas fa-times-circle"></i></div>
                     <div>
                         %s
                     </div>

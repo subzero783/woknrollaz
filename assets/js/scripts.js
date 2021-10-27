@@ -124,6 +124,8 @@ jQuery(document).ready(function($){
       'opacity': '0',
       'visibility': 'hidden'
     });
-  })
+  });
+
+  
 
 });   
