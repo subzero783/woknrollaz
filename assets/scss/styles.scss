@@ -2627,11 +2627,16 @@ body {
   }
   > #floating_signup {
     position: fixed;
-    bottom: 20px;
+    
     z-index: 1000;
     max-width: 240px;
     &.open {
       right: 10px;
+      bottom: 10px;
+      @media only screen and (max-width: 768px){
+        right: 0;
+        bottom: 10px;
+      }
     }
     &.closed {
       right: 0;
