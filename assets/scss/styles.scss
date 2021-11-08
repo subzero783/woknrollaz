@@ -1455,13 +1455,13 @@ body {
       }
     }
     .hero_1_block {
-      height: 500px;
+      height: 500px; 
       > span {
-        top: 60%;
+        top: 50%;
         > h1 {
           font-size: 50px;
           @media screen and (max-width: 768px) {
-            font-size: 30px;
+            font-size: 30px; 
           }
         }
       }
