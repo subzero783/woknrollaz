@@ -261,3 +261,44 @@ function my_custom_admin_css() {
 add_filter( 'wp_sitemaps_add_provider', function ($provider, $name) {
     return ( $name == 'users' ) ? false : $provider;
   }, 10, 2);
+
+// REMOVE BEFORE PUSHING TO LIVE SITE
+// add_action( 'rest_api_init', function (){
+//    register_rest_field(
+//           'page',
+//           'content',
+//           array(
+//                  'get_callback'    => 'htr_do_shortcodes',
+//                  'update_callback' => null,
+//                  'schema'          => null,
+//           )
+//        );
+// });
+// add_action('rest_api_init', function(){
+//     register_rest_field(
+//         'page',
+//         'custom_fields',
+//         array(
+//             'get_callback' => 'get_post_meta_for_api',
+//             'update_callback' => null,
+//             'schema' => null
+//         )
+//     );
+// });
+
+
+// function get_post_meta_for_api( $object ) {
+//     $post_id = $object['id'];
+
+//     return get_post_meta( $post_id );
+// }
+
+// function htr_do_shortcodes( $object, $field_name, $request ){
+//     WPBMap::addAllMappedShortcodes();
+//     global $post;
+//     $post = get_post ($object['id']);
+//     $output['rendered'] = apply_filters( 'the_content', $post->post_content );
+//     return $output;
+// }
+
+// add_filter('acf/settings/remove_wp_meta_box', '__return_false');
