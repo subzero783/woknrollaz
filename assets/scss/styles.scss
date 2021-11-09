@@ -1794,7 +1794,7 @@ body {
                   }
                   input,
                   textarea {
-                    -webkit-appearance: none;
+                    
                     outline: none;
                     border: none;
                     font-size: 16px;
@@ -1802,7 +1802,8 @@ body {
                     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
                   }
                   input[type^="checkbox"] {
-                    -webkit-appearance: auto !important;
+                    border: 1px solid #000; 
+                    padding: 10px;
                   }
                   textarea {
                     margin-top: 20px;
