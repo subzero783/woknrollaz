@@ -1318,10 +1318,10 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_61897f6c8347e",
-                            "label": "First Column",
-                            "name": "",
-                            "type": "tab",
+                            "key": "field_6189c3deb011d",
+                            "label": "Background Image",
+                            "name": "background_image",
+                            "type": "image",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1330,43 +1330,16 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "placement": "top",
-                            "endpoint": 0
-                        },
-                        {
-                            "key": "field_61897f6c83482",
-                            "label": "Form Shortcode",
-                            "name": "form_shortcode",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_61897f6c83481",
-                            "label": "Second Column",
-                            "name": "",
-                            "type": "tab",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "placement": "top",
-                            "endpoint": 0
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         },
                         {
                             "key": "field_61897f6c8347f",
@@ -1386,6 +1359,25 @@
                             "toolbar": "full",
                             "media_upload": 1,
                             "delay": 0
+                        },
+                        {
+                            "key": "field_61897f6c83482",
+                            "label": "Form Shortcode",
+                            "name": "form_shortcode",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -2908,5 +2900,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1636401376
+    "modified": 1636420544
 }
