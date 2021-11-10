@@ -3002,6 +3002,7 @@ body {
   form {
     display: flex;
     flex-flow: row wrap;
+    overflow: hidden;
     > .wpcf7-response-output,
     > .wpcf7-not-valid-tip {
       font-family: "Montserrat", sans-serif;
