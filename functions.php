@@ -286,6 +286,16 @@ add_filter( 'wp_sitemaps_add_provider', function ($provider, $name) {
 //     );
 // });
 
+// add_action('graphql_register_types', function(){
+//     register_graphql_field('Page', 'wpbakery_content', [
+//         'type' => 'String', 
+//         'description' => __('WPBakery Content of Page', 'wp-graphql'),
+//         'resolve' => function(){
+//             return $this->htr_do_shortcodes
+//         }
+//     ])
+// });
+
 
 // function get_post_meta_for_api( $object ) {
 //     $post_id = $object['id'];
