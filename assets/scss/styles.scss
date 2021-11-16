@@ -127,30 +127,32 @@ p {
     transform: translateY(0);
     z-index: 2;
   }
-  .navbar-toggler {
-    display: inline-block;
-    padding: 5px;
-    border: none;
-    &:hover,
-    &:active,
-    &:focus {
+  .container {
+
+    .navbar-toggler {
+      display: inline-block;
+      padding: 5px;
+      border: none;
+      &:hover,
+      &:active,
+      &:focus {
+        > div {
+          background-color: #eb0028;
+        }
+      }
       > div {
-        background-color: #eb0028;
+        width: 21px;
+        height: 2px;
+        background-color: #000;
+        margin: 4px auto;
       }
     }
-    > div {
-      width: 21px;
-      height: 2px;
-      background-color: #000;
-      margin: 4px auto;
-    }
-  }
-  .navbar-brand {
-    width: 55%;
-    text-align: center;
-    > img {
-      width: 85px;
-      float: left;
+    .navbar-brand {
+      width: 55%;
+      text-align: center;
+      > img {
+        width: 85px;
+      }
     }
   }
   .navbar-collapse {

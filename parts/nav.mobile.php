@@ -84,12 +84,14 @@
     $format_nav_mobile = ' 
         <nav class="navbar navbar-mobile navbar-expand-lg navbar-light bg-light">
             <div class="container">
+                <div></div>
+                <a class="navbar-brand" href="%s">%s</a>
+                
                 <a href="javascript:;" class="navbar-toggler">
                     <div></div>
                     <div></div>
                     <div></div>
                 </a>
-                <a class="navbar-brand" href="%s">%s</a>
                 <div class="navbar-collapse" id="navbarText">
                     %s
                     %s
