@@ -111,7 +111,6 @@
             );
             echo $floating_signup_content;
         }
-        print_r($popups_info);
     ?>
 </div>
 	<?php wp_footer(); ?>

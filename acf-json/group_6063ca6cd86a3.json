@@ -1032,90 +1032,6 @@
                     "maxlength": ""
                 }
             ]
-        },
-        {
-            "key": "field_61957b8779ec4",
-            "label": "Popups",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_61957b98f8722",
-            "label": "Popups",
-            "name": "popups",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_61957bf9f8724",
-                    "label": "Choose the Popup",
-                    "name": "choose_the_popup",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "friendsgiving": "Friends Giving"
-                    },
-                    "default_value": false,
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 1,
-                    "ajax": 0,
-                    "return_format": "value",
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_61957ba8f8723",
-                    "label": "On What Page(s) Should the Popup Be Shown?",
-                    "name": "on_what_pages_should_the_popup_be_shown",
-                    "type": "page_link",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "page",
-                        "post",
-                        "tribe_events"
-                    ],
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "allow_archives": 1,
-                    "multiple": 1
-                }
-            ]
         }
     ],
     "location": [
@@ -1151,5 +1067,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1637186686
+    "modified": 1637188914
 }
