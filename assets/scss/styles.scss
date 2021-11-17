@@ -3010,11 +3010,21 @@ body {
     }
   }
 }
-#popmake-2003 {
+#popmake-2003,
+#popmake-1643 {
   border: unset;
   box-shadow: unset;
   background-color: transparent;
-  #pum_popup_title_2003 {
+  padding: 5px;
+  &:active,
+  &:focus,
+  &:hover {
+    border: unset !important;
+  }
+  .pum-close {
+    right: 0 !important;
+  }
+  .pum-title {
     display: none;
   }
   #friendsgiving-video {
