@@ -1,6 +1,7 @@
 <?php
 	$footer_info = get_field('footer', 'options');
     $company_info = get_field('company_info', 'options');
+    $popups_info = get_field('popups', 'options');
 
     function footer_column_content( $titles_and_text, $extra_content=null){
 
@@ -110,6 +111,7 @@
             );
             echo $floating_signup_content;
         }
+        print_r($popups_info);
     ?>
 </div>
 	<?php wp_footer(); ?>
