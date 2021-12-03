@@ -941,11 +941,16 @@ body {
         > div.grid-item {
           width: 25%;
           box-sizing: border-box;
+          margin-right: 1%;
           @media only screen and (max-width: 960px){
             width: 33%
           }
           @media only screen and (max-width: 768px){
-            width: 50% 
+            width: 48%;
+            margin-right: 2%;
+          }
+          &:nth-child(even){
+            margin-right: 0;
           }
           > a {
             > img {
