@@ -1,6 +1,7 @@
 <?php
 	$footer_info = get_field('footer', 'options');
     $company_info = get_field('company_info', 'options');
+    $popups_info = get_field('popups', 'options');
 
     function footer_column_content( $titles_and_text, $extra_content=null){
 
@@ -71,7 +72,7 @@
 		</div>
 
 	</div>
-    <div class="container">
+    <div class="container" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -86,6 +87,31 @@
             </div>
         </div>
     </div>
+    <?php
+        if($footer_info['show_floating_signup']){
+
+            $floating_signup_guide = '
+                <div id="floating_signup" class="open">
+                    <div class="close-float-signup open"><i class="fas fa-times-circle"></i></div>
+                    <div class="open-float-signup closed"><i class="fas fa-envelope-open"></i></div>
+                    <div id="content" class="open">
+                        <div>
+                            %s
+                        </div>
+                        <div>
+                            %s
+                        </div>
+                    </div>
+                </div>
+            ';
+            $floating_signup_content = sprintf(
+                $floating_signup_guide, 
+                !empty($footer_info['floating_signup_headline'])? '<h3>'.$footer_info['floating_signup_headline'].'</h3>' : '',
+                !empty($footer_info['floating_signup_code'])? $footer_info['floating_signup_code'] : ''
+            );
+            echo $floating_signup_content;
+        }
+    ?>
 </div>
 	<?php wp_footer(); ?>
 </body>

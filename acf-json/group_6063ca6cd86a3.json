@@ -196,6 +196,95 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_617865ab96315",
+                    "label": "Footer Settings",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_617865c596317",
+                    "label": "Show Floating Signup",
+                    "name": "show_floating_signup",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_6178660796319",
+                    "label": "Floating Signup Headline",
+                    "name": "floating_signup_headline",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_617865c596317",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_617865e796318",
+                    "label": "Floating Signup Code",
+                    "name": "floating_signup_code",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_617865c596317",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_6079cb7428772",
                     "label": "Column 1",
                     "name": "",
@@ -616,7 +705,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_6109cc5f66b85",
+                    "key": "field_617863cdcaea6",
                     "label": "Column 4",
                     "name": "",
                     "type": "tab",
@@ -632,7 +721,7 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_6109cc4d66b82",
+                    "key": "field_617863d2caea7",
                     "label": "Titles and Text",
                     "name": "column_4_titles_and_text",
                     "type": "repeater",
@@ -651,7 +740,7 @@
                     "button_label": "",
                     "sub_fields": [
                         {
-                            "key": "field_6109cc4d66b83",
+                            "key": "field_617863d2caea8",
                             "label": "Title",
                             "name": "title",
                             "type": "text",
@@ -670,7 +759,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_6109cc4d66b84",
+                            "key": "field_617863d2caea9",
                             "label": "Text",
                             "name": "text",
                             "type": "textarea",
@@ -691,7 +780,7 @@
                     ]
                 },
                 {
-                    "key": "field_6109d3ac16be2",
+                    "key": "field_617863efcaeaa",
                     "label": "Add Social Icons",
                     "name": "add_social_icons_4",
                     "type": "true_false",
@@ -710,7 +799,7 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_6109d3b616be3",
+                    "key": "field_617863f5caeab",
                     "label": "Add Shortcode",
                     "name": "add_shortcode_4",
                     "type": "true_false",
@@ -729,7 +818,7 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_6109d3be16be4",
+                    "key": "field_617863fbcaeac",
                     "label": "Shortcode",
                     "name": "shortcode_4",
                     "type": "text",
@@ -738,7 +827,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_6109d3b616be3",
+                                "field": "field_617863f5caeab",
                                 "operator": "==",
                                 "value": "1"
                             }
@@ -977,5 +1066,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1631836754
+    "show_in_rest": 0,
+    "modified": 1637188914
 }

@@ -191,9 +191,9 @@ function blankslate_load_scripts()
     
     wp_enqueue_style('custom-styles', get_stylesheet_directory_uri() . gustavo_get_cachebusted_css());
 
-    wp_enqueue_style('animations-css', get_stylesheet_directory_uri() . '/assets/css/animations-5.css');
+    wp_enqueue_style('animations-css', get_stylesheet_directory_uri() . '/assets/css/animations-5.css?r='.rand(10,1000) );
     
-    wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri() . '/assets/dist/js/scripts5.min.js', array('jquery'), '3.6.0', true);
+    wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri() . '/assets/dist/js/scripts.min.js?r='.rand(10,1000), array('jquery'), '3.6.0', true);
 }
 
 /* 2.3 GET CACHE-BUSTED CSS FILE
@@ -209,7 +209,7 @@ function gustavo_get_cachebusted_css()
     //     $css_manifest_url = get_stylesheet_directory_uri() . '/assets/dist/css/rev-manifest.json';
     //     $css_manifest_content = json_decode(file_get_contents($css_manifest_url), true);
     //     $css_src = '/assets/dist/css/'.$css_manifest_content['style.min.css'];
-        $css_src = '/assets/dist/css/style.min.css';
+        $css_src = '/assets/dist/css/style.min.css?r='.rand(10,1000);
     // endif;
     return $css_src;
 }
@@ -244,3 +244,71 @@ function google_tag_manager(){
         </script>
 <?php
 }
+
+// Admin side CSS
+add_action('admin_head', 'my_custom_admin_css');
+function my_custom_admin_css() {
+?>
+  <style>
+      div[data-name^='column_4_temporary_disabled_group']{
+          display: none;
+      }
+  </style>
+<?php
+}
+
+// Remove Wordpress site users from sitemap.xml
+add_filter( 'wp_sitemaps_add_provider', function ($provider, $name) {
+    return ( $name == 'users' ) ? false : $provider;
+  }, 10, 2);
+
+// REMOVE BEFORE PUSHING TO LIVE SITE
+// add_action( 'rest_api_init', function (){
+//    register_rest_field(
+//           'page',
+//           'content',
+//           array(
+//                  'get_callback'    => 'htr_do_shortcodes',
+//                  'update_callback' => null,
+//                  'schema'          => null,
+//           )
+//        );
+// });
+// add_action('rest_api_init', function(){
+//     register_rest_field(
+//         'page',
+//         'custom_fields',
+//         array(
+//             'get_callback' => 'get_post_meta_for_api',
+//             'update_callback' => null,
+//             'schema' => null
+//         )
+//     );
+// });
+
+// add_action('graphql_register_types', function(){
+//     register_graphql_field('Page', 'wpbakery_content', [
+//         'type' => 'String', 
+//         'description' => __('WPBakery Content of Page', 'wp-graphql'),
+//         'resolve' => function(){
+//             return $this->htr_do_shortcodes
+//         }
+//     ])
+// });
+
+
+// function get_post_meta_for_api( $object ) {
+//     $post_id = $object['id'];
+
+//     return get_post_meta( $post_id );
+// }
+
+// function htr_do_shortcodes( $object, $field_name, $request ){
+//     WPBMap::addAllMappedShortcodes();
+//     global $post;
+//     $post = get_post ($object['id']);
+//     $output['rendered'] = apply_filters( 'the_content', $post->post_content );
+//     return $output;
+// }
+
+// add_filter('acf/settings/remove_wp_meta_box', '__return_false');
