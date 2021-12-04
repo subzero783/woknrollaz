@@ -970,13 +970,11 @@ body {
         > div.grid-item {
           width: 25%;
           box-sizing: border-box;
-          margin-right: 1%;
           @media only screen and (max-width: 960px){
             width: 33%
           }
           @media only screen and (max-width: 768px){
             width: 48%;
-            margin-right: 2%;
           }
           &:nth-child(even){
             margin-right: 0;
@@ -989,6 +987,7 @@ body {
           > a.single-event-link {
             background: #1d1d1d;
             display: block;
+            position: relative;
             > .featured-image-container {
               > img {
                 width: 100%;
@@ -2397,6 +2396,27 @@ body {
         background-color: #fff;
       }
 
+    }
+  }
+  &.page-id-1912, 
+  &.page-id-1522 {
+    main {
+      .masonry-grid-container {
+        .masonry-grid {
+          > div.grid-item {
+            width: 25%;
+            box-sizing: border-box;
+            margin-right: 1%;
+            @media only screen and (max-width: 960px){
+              width: 33%
+            }
+            @media only screen and (max-width: 768px){
+              width: 48%;
+              margin-right: 2%;
+            }
+          }
+        }
+      }
     }
   }
   .form_with_locations_1_block {
