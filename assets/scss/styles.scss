@@ -979,9 +979,16 @@ body {
           &:nth-child(even){
             margin-right: 0;
           }
-          > a {
+          > a.image-modal-button,
+          > a.video-modal-button {
+            display: block;
             > img {
+              width: 100%;
               padding: 5px;
+            }
+            > video {
+              padding: 5px 5px 0 5px;
+              width: 100%;
             }
           }
           > a.single-event-link {
@@ -1066,7 +1073,7 @@ body {
           }
 
         }
-        .single-event-images-slick-slider {
+        .single-event-slick-slider {
           display: flex;
           width: 100%;
           flex-flow: row nowrap;
@@ -1091,7 +1098,7 @@ body {
               .slick-slide {
                 height: 100%;
                 width: 100%;
-                .slide-image {
+                .slide-image-or-video {
                   > .close-and-download-container {
                     display: flex;
                     flex-flow: row nowrap;
@@ -1119,6 +1126,7 @@ body {
                         right: 0;
                         top: -5px;
                         text-align: right;
+                        margin-left: auto;
                         &:hover, 
                         &:active, 
                         &:focus {
@@ -1127,7 +1135,7 @@ body {
                       }
                     }
                   }
-                  .image-container {
+                  .image-and-video-container {
                     background-color: #000;
                     img {
                       max-height: 500px;
@@ -1138,6 +1146,11 @@ body {
                         width: 100% !important;
                         max-height: none;
                       }
+                    }
+                    video {
+                      width: 100%;
+                      display:block;
+                      margin: 0 auto;
                     }
                   }
                 }
