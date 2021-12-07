@@ -124,18 +124,18 @@ get_header();
                     );
 
                     $event_slider .= '
-                    <div class="slide-image-or-video">
-                        <div class="close-and-download-container">
-                            <a class="download-image-button" href="'.$event['video_mp4'].'" download title="Download Video"><i class="fas fa-download"></i></a>
-                            <a href="javascript:;" class="modal-close" title="Close Slider">
-                                <i class="fas fa-window-close"></i>
-                            </a>
+                        <div class="slide-image-or-video">
+                            <div class="close-and-download-container">
+                                <a class="download-image-button" href="'.$event['video_mp4'].'" download title="Download Video"><i class="fas fa-download"></i></a>
+                                <a href="javascript:;" class="modal-close" title="Close Slider">
+                                    <i class="fas fa-window-close"></i>
+                                </a>
+                            </div>
+                            <div class="image-and-video-container">
+                                '.$event_single_slide_content.'
+                            </div>
                         </div>
-                        <div class="image-and-video-container">
-                            '.$event_single_slide_content.'
-                        </div>
-                    </div>
-                ';
+                    ';
                 }
             }
 
