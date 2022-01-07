@@ -3000,12 +3000,8 @@ body {
           .do-not-remove-this {
             display:none;
           }
-          .mc-field-group:nth-of-type(1) {
-            label {
-              display:none;
-            }
-          }
-          .mc-field-group:nth-of-type(2){
+          .email-group, 
+          .select-group {
             label {
               color: #fff;
               text-align: center;
@@ -3016,11 +3012,13 @@ body {
               border: unset;
             }
           }
-          .mc-field-group:nth-of-type(1),
-          .mc-field-group:nth-of-type(2) {
+          .email-group,
+          .name-group,
+          .select-group {
             width: 100%;
             padding: 0 0 10px 0;
             #mce-EMAIL,
+            #mce-NAME,
             select {
               width: 100%;
               font-size: 14px;
