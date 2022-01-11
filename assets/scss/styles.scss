@@ -2279,7 +2279,7 @@ body {
                         display: flex;
                         justify-content: space-between;
                         position: relative;
-                        align-items: end;
+                        align-items: flex-start;
                         flex-flow: row nowrap;
                         > h5.menu_item_title {
                           margin-top: 5px;
@@ -2293,9 +2293,10 @@ body {
                           position: relative;
                           height: 3px;
                           z-index: 1;
-                          bottom: -19px;
+                          bottom: -9px;
                           border-bottom: 1px dashed #c3c3c3;
                           width: 100%;
+                          margin-right: 10px;
                         }
                         > h5.price {
                           color: #eb0028;
